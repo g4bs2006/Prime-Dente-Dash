@@ -175,6 +175,7 @@ function AgendamentosChart({ lineCards }) {
         borderDash: [6, 4],
         pointRadius: 3,
         pointHoverRadius: 5,
+        fill: true,
         tension: 0.35,
         order: 0,
       },
@@ -302,9 +303,11 @@ export default function App() {
   useEffect(() => { load() }, [load])
 
   const c            = data?.counts ?? {}
+  const receita      = data?.receita ?? 0
   const compareceu   = (c.cFechouComp ?? 0) + (c.cNaoFechouComp ?? 0)
   const ausencias    = (c.cFaltou ?? 0) + (c.cCancelado ?? 0) + (c.cReagendado ?? 0)
   const totalPipeline = (c.cAgendado ?? 0) + compareceu + ausencias
+  const ticketMedio  = c.cFechouComp > 0 ? (receita / c.cFechouComp) : 0
 
   return (
     <div className="page">
@@ -313,10 +316,10 @@ export default function App() {
       <header className="header">
         <div className="brand">
           <div className="brand-mark">
-            <span className="brand-initials">IBS</span>
+            <span className="brand-initials">PD</span>
           </div>
           <div className="brand-text">
-            <h1 className="brand-name">IBS Implantes</h1>
+            <h1 className="brand-name">Prime Dente</h1>
             <p className="brand-sub">Painel de Performance · Gestão de Atendimentos</p>
           </div>
         </div>
@@ -352,12 +355,6 @@ export default function App() {
               color={BLUE}
             />
             <KpiCard
-              label="Comparecimentos"
-              value={loading ? <Skeleton w={56} h={28} /> : compareceu.toLocaleString('pt-BR')}
-              color={TEAL}
-              sub={loading ? null : `de ${((c.cAgendado ?? 0) + compareceu + (c.cFaltou ?? 0)).toLocaleString('pt-BR')} agendados`}
-            />
-            <KpiCard
               label="Taxa de Comparecimento"
               value={loading ? <Skeleton w={56} h={28} /> : fmtPct(compareceu, totalPipeline)}
             />
@@ -367,10 +364,14 @@ export default function App() {
               color={GREEN}
             />
             <KpiCard
-              label="Cancelamentos"
-              value={loading ? <Skeleton w={56} h={28} /> : ((c.cCancelado ?? 0) + (c.cReagendado ?? 0)).toLocaleString('pt-BR')}
-              color={ORANGE}
-              sub={loading ? null : `${(c.cCancelado ?? 0)} cancelados · ${(c.cReagendado ?? 0)} reagendados`}
+              label="Faturamento"
+              value={loading ? <Skeleton w={80} h={28} /> : fmtBRL(receita)}
+              color={GREEN}
+            />
+            <KpiCard
+              label="Ticket Médio"
+              value={loading ? <Skeleton w={80} h={28} /> : fmtBRL(ticketMedio)}
+              color={BLUE}
             />
           </div>
         </section>

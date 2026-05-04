@@ -13,8 +13,8 @@ html, body, #root {
 
 /* ── Header ──────────────────────────────────────────────── */
 .header {
-  background: #0e0514;
-  border-bottom: 1px solid #1e0830;
+  background: #ffffff;
+  border-bottom: 1px solid #e9ecf0;
   padding: 0 40px;
   height: 68px;
   display: flex;
@@ -30,15 +30,12 @@ html, body, #root {
 .brand-mark {
   width: 44px;
   height: 44px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 45%, rgba(0,0,0,0.15) 100%),
-    linear-gradient(90deg, #570887 0%, #A00CA0 50%, #E62B13 100%);
+  background: #2563eb;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 10px rgba(87,8,135,0.45);
 }
 
 .brand-initials {
@@ -51,13 +48,13 @@ html, body, #root {
 .brand-name {
   font-size: 15px;
   font-weight: 700;
-  color: #d9a8f5;
+  color: #0f172a;
   letter-spacing: -0.3px;
 }
 
 .brand-sub {
   font-size: 11px;
-  color: #6b4a8a;
+  color: #64748b;
   margin-top: 1px;
   font-weight: 400;
 }
@@ -66,14 +63,12 @@ html, body, #root {
 
 .update-time {
   font-size: 12px;
-  color: #6b4a8a;
+  color: #64748b;
   font-weight: 400;
 }
 
 .btn-refresh {
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.14) 0%, transparent 50%, rgba(0,0,0,0.12) 100%),
-    linear-gradient(90deg, #570887 0%, #A00CA0 50%, #E62B13 100%);
+  background: #2563eb;
   color: #fff;
   border: none;
   padding: 8px 20px;
@@ -84,7 +79,6 @@ html, body, #root {
   font-family: inherit;
   transition: opacity 0.15s;
   letter-spacing: 0.1px;
-  box-shadow: 0 2px 8px rgba(87,8,135,0.45);
 }
 
 .btn-refresh:hover    { opacity: 0.88; }
@@ -291,16 +285,14 @@ html, body, #root {
 }
 
 .period-tab.active {
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.14) 0%, transparent 50%, rgba(0,0,0,0.1) 100%),
-    linear-gradient(90deg, #570887 0%, #A00CA0 50%, #E62B13 100%);
-  border-color: #570887;
+  background: #2563eb;
+  border-color: #2563eb;
   color: #fff;
 }
 
 .period-tab:hover:not(.active) {
-  border-color: #570887;
-  color: #570887;
+  border-color: #2563eb;
+  color: #2563eb;
 }
 
 /* ── Line chart ──────────────────────────────────────────── */

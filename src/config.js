@@ -1,11 +1,11 @@
-export const TOKEN    = 'Bearer pn_Ug8CRYMruAvzLAKpt7zx2inZ4yySd6ZqHUxRcF7L9Q'
-export const PANEL_ID = 'af63ad5e-ce75-471c-b215-0a4f627a7ec3'
+export const TOKEN    = 'Bearer pn_4Ysp3lQlh8rfIOx2xgqnYGPfsRxULlZCqDkMm86gA'
+export const PANEL_ID = '883dd992-10f4-4b4d-a5a5-785967e2eac5'
 
 export const STEPS = {
-  agendado:      '445f0047-fc28-42c8-9dc5-95f162d6853a',
-  fechouComp:    'd5b9ecc8-91ae-49c6-ac02-76450492d096',
-  naoFechouComp: 'd183448f-905d-4af8-bdf8-ecd1963329ba',
-  faltou:        '23c16fb3-f681-475f-924b-4aeacfcefa20',
-  cancelado:     '351d27b8-31cc-4b59-8b59-ff4fc2d8e496',
-  reagendado:    '841ea93b-3c91-415b-80a0-cbe417dad027',
+  agendado:      '95a9ca5f-7df1-4c5f-921b-c8b209726fe7',
+  fechouComp:    '91ccf1d9-039e-49e1-838d-41f2c17c046d',
+  naoFechouComp: '7b190e53-eaf9-43d4-b110-27fdb68c5a61',
+  faltou:        '901aefe8-604f-4700-9196-2b82213f6f19',
+  cancelado:     '9465e1de-c15a-4941-a0ad-1401d09d8eac',
+  reagendado:    '71f57f59-ebbb-49a6-b68a-226af07880fe',
 }
