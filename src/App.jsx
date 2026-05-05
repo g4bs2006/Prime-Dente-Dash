@@ -383,7 +383,7 @@ export default function App() {
             <div className="donuts-row">
               {[0, 1, 2].map(i => <div key={i} className="chart-card chart-skeleton"><Skeleton w="100%" h={260} /></div>)}
             </div>
-          ) : (
+          ) : data ? (
             <div className="donuts-row">
               <DonutChart
                 title="Desfecho dos Atendimentos"
@@ -414,7 +414,7 @@ export default function App() {
                 colors={[RED, ORANGE, AMBER]}
               />
             </div>
-          )}
+          ) : null}
         </section>
 
         {/* Seção Linha */}
@@ -422,9 +422,9 @@ export default function App() {
           <h2 className="section-label">Evolução</h2>
           {loading ? (
             <div className="chart-card chart-skeleton"><Skeleton w="100%" h={320} /></div>
-          ) : (
+          ) : data ? (
             <AgendamentosChart lineCards={data.lineCards} />
-          )}
+          ) : null}
         </section>
 
       </main>
