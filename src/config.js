@@ -1,4 +1,4 @@
-export const TOKEN    = 'Bearer pn_KrcdEpJkOEnWrQeMY7wTljev0nKn6GI1WP5LxNYuLc'
+export const TOKEN    = 'Bearer pn_4Ysp3lQlh8rfIOx2xgqnYGPfsRxULlZCqDkMm86gA'
 export const PANEL_ID = '883dd992-10f4-4b4d-a5a5-785967e2eac5'
 
 export const STEPS = {
